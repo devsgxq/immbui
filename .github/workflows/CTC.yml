@@ -74,9 +74,6 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cd feeds/packages
-        wget https://patch-diff.githubusercontent.com/raw/openwrt/packages/pull/20940.patch
-        git apply 20940.patch
 
     - name: 自定义配置 ${{matrix.target}}
       env:
